@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "511637126641",
+    "project_id": "ring-size-calculator",
+    "storage_bucket": "ring-size-calculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511637126641:android:66327e03f240bbc0085850",
+        "android_client_info": {
+          "package_name": "com.example.ring_size_calculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511637126641-ccmqv8ud103e6u60f8bpkp3ohop87fsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHqu74_dcpRRxs3DCD9WONJpvSqPKIsYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511637126641-ccmqv8ud103e6u60f8bpkp3ohop87fsc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
