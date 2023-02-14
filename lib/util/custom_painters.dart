@@ -34,7 +34,7 @@ class DiameterPainter extends CustomPainter {
           ..style = PaintingStyle.stroke
           ..strokeWidth = 1,
         _outerLinesPaint = Paint()
-          ..color = Colors.blue
+          ..color = Colors.purple
           ..style = PaintingStyle.stroke
           ..strokeWidth = 2,
         super(repaint: radius);
@@ -120,12 +120,12 @@ class GraphPaper extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Paint paint = Paint()
-      ..color = Colors.yellow
+      ..color = Colors.grey
       ..style = PaintingStyle.stroke;
 
-    for (int i = 1; i <= size.width; i += 10) {
-      canvas.drawLine(Offset(i.toDouble(), 10), Offset(i.toDouble(), size.height), paint);
-      canvas.drawLine(Offset(10, i.toDouble()), Offset(size.width, i.toDouble()), paint);
+    for (int i = 0; i <= size.width; i += 10) {
+      canvas.drawLine(Offset(i.toDouble(), 0), Offset(i.toDouble(), size.height), paint);
+      canvas.drawLine(Offset(0, i.toDouble()), Offset(size.width, i.toDouble()), paint);
     }
   }
 
