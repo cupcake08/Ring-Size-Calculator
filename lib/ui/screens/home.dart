@@ -6,12 +6,15 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Ring Size Calculator'),
-        centerTitle: true,
+    return SafeArea(
+      top: false,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Ring Size Calculator'),
+          centerTitle: true,
+        ),
+        body: const RingBox(),
       ),
-      body: const RingBox(),
     );
   }
 }

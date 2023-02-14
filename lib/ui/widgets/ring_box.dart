@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ring_size_calculator/main.dart';
 import 'package:ring_size_calculator/models/ring_size.dart';
+import 'package:ring_size_calculator/ui/widgets/widgets.dart';
 import 'package:ring_size_calculator/util/util.dart';
 
 class RingBox extends StatefulWidget {
@@ -121,6 +122,11 @@ class _RingBoxState extends State<RingBox> {
           ),
         ),
         const Spacer(),
+        Text(
+          "Made with ❤️ by Ankit Bhankharia",
+          style: Theme.of(context).textTheme.labelLarge,
+        ),
+        const SizedBox(height: 5),
       ],
     );
   }
