@@ -1,7 +1,14 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:ring_size_calculator/firebase_options.dart';
-import 'package:ring_size_calculator/ui/widgets/widgets.dart';
+import 'package:ring_size_calculator/models/ring_size.dart';
+import 'package:ring_size_calculator/ui/screens/home.dart';
+
+final ringSizesCollectionRef = FirebaseFirestore.instance.collection("ringSizes").withConverter<RingSize>(
+      fromFirestore: (snapshot, _) => RingSize.fromJson(snapshot.data()!),
+      toFirestore: (ringSize, _) => ringSize.toJson(),
+    );
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,17 +32,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Ring Size Calculator'),
-        centerTitle: true,
-      ),
-      body: const RingBox(),
-    );
-  }
-}
